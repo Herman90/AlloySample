@@ -1,0 +1,16 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model AlloyTraining.Models.Blocks.TeaserBlock
+
+<div class="span">
+  <div class="media">
+    <div class="mediaImg">
+      <img src="@Url.ContentUrl(Model.TeaserImage)"/>
+    </div>
+    <div class="mediaText">
+      <h2 @Html.EditAttributes(x => x.TeaserHeading)>@Model.TeaserHeading</h2>
+      <p>@Html.PropertyFor(x => x.TeaserText)</p>
+    </div>
+  </div>
+</div>
